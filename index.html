@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/tode.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="score">Score: 0</div>
+    <div class="timer">Time: 03:00</div>
+    <div class="inventory">
+      <div class="inventory-item fire-count">🔥 x0</div>
+      <div class="inventory-item thunder-count">⚡ x0</div>
+      <div class="inventory-item shield-count">🛡️ x0</div>
+      <div class="inventory-item freeze-count">❄️ x0</div>
+      <div class="inventory-item life-count">❤️ x0</div>
+    </div>
+    <div class="life-bar-container">
+      <div class="life-bar-fill"></div>
+    </div>
+    <div class="boss-health-bar-container" style="display: none;">
+      <div class="boss-health-bar-label">Supervillain</div>
+      <div class="boss-health-bar-track">
+        <div class="boss-health-bar-fill"></div>
+      </div>
+    </div>
+    <div class="boss-warning" style="display: none;">Supervillain Incoming!</div>
+    <div class="game-over" style="display: none;">
+      <h1>Game Over</h1>
+      <p class="final-score">Score: 0</p>
+      <button class="replay-button">Replay</button>
+      <div class="high-score-list">
+        <h2>🏆 Top 10 Scores</h2>
+        <ol class="high-score-entries"></ol>
+      </div>
+    </div>
+    <div class="high-score-modal" style="display: none;">
+      <div class="high-score-modal-content">
+        <h2>🎉 New High Score!</h2>
+        <p class="high-score-modal-score">Score: 0</p>
+        <input type="text" class="high-score-name-input" maxlength="20" placeholder="Enter your name" autocomplete="off" />
+        <button class="high-score-submit-button">Submit</button>
+      </div>
+    </div>
+    <div class="stage-complete" style="display: none;">
+      <h1 class="stage-title">Stage Complete!</h1>
+      <p class="stage-final-score">Score: 0</p>
+      <button class="stage-replay-button">Continue</button>
+    </div>
+    <div class="pause-overlay" style="display: none;">
+      <h1>Paused</h1>
+      <p>Press P to resume</p>
+      <button class="resume-button">Resume</button>
+    </div>
+    <button class="pause-button">⏸</button>
+    <button class="controls-toggle-button">❓</button>
+    <div class="controls-panel" style="display: none;">
+      <h2>Controls</h2>
+      <ul>
+        <li><span class="key">Arrow Keys</span> Move</li>
+        <li><span class="key">Space</span> Tongue Attack</li>
+        <li><span class="key">Ctrl + Space</span> Spit Fire 🔥</li>
+        <li><span class="key">T</span> Thunderbolt ⚡</li>
+        <li><span class="key">H</span> Use Shield 🛡️</li>
+        <li><span class="key">Ctrl + Shift + F</span> Time Freeze ❄️</li>
+        <li><span class="key">P</span> Pause / Resume</li>
+      </ul>
+      <p>❤️ Extra Life gifts auto-revive you on the same stage when you'd otherwise die.</p>
+      <button class="controls-close-button">Close</button>
+    </div>
+    <canvas class="game"></canvas>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
